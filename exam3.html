@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+			padding: 0px;
+
+			background-image: url("https://wallpapercave.com/wp/wp3161585.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		div {
+			opacity: 0.9;
+			width: 600px;
+			height: 650px;
+			background-color: gray;
+			margin-left: 200px;
+		}
+
+		.a {
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		label {
+			font-size: 17px;
+		}
+
+		button {
+			margin-left: 80px;
+		}
+
+		#ans {
+			margin-left: 80px;
+			visibility: hidden;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+	<script type="text/javascript">
+		var d=0;
+		function g() {
+			var x = document.getElementById('ans');
+			var f = document.getElementById('fm');
+			var hd = document.getElementById('hide');
+			var one=document.getElementById('1').checked;
+			var two=document.getElementById('2').checked;
+			var three=document.getElementById('3').checked;
+			var four=document.getElementById('4').checked;
+			var five=document.getElementById('5').checked;
+			f.addEventListener('submit', function () {
+				if(one==true){
+					d++;
+				}
+				if(two==true){
+					d++;
+				}
+				if(three==true){
+					d++;
+				}
+				if(four==true){
+					d++;
+				}
+				if(five==true){
+					d++;
+				}
+				/*x.innerHTML = "Score:" + d + "/" + 5;
+				x.style.visibility = "visible";*/
+				hd.value=d;
+			})
+		}
+	</script>
+</head>
+
+<body>
+	<form id="fm" action="http://localhost/foldername/ex3.php" method="POST">
+		<div>
+			<label class="a">1)Which of the following is not JavaScript Data Types?</label><br>
+			<input type="radio" name="a"><label>Undefined</label><br>
+			<input type="radio" name="a"><label>Number</label><br>
+			<input type="radio" name="a"><label>Boolean</label><br>
+			<input type="radio" name="a" id="1"><label>Float</label><br>
+			<label class="a">2)Which company developed JavaScript?</label><br>
+			<input type="radio" name="b" id="2"><label>Netscape</label><br>
+			<input type="radio" name="b"><label>Bell Labs</label><br>
+			<input type="radio" name="b"><label>Sun Microsystems</label><br>
+			<input type="radio" name="b"><label>IBM</label><br>
+			<label class="a">3)Inside which HTML element do we put the JavaScript?</label><br>
+			<input type="radio" name="c"><label>&lt;style&gt;</label><br>
+			<input type="radio" name="c"><label>&lt;head&gt;</label><br>
+			<input type="radio" name="c" id="3"><label>&lt;script&gt;</label><br>
+			<input type="radio" name="c"><label>&lt;meta&gt;</label><br>
+			<label class="a">4)Choose the correct JavaScript syntax to change the content of the following HTML
+				code.</label><br>
+			<input type="radio" name="d"><label>document.getElement (“letsfindcourse").innerHTML = "I am a
+				letsfindcourse";</label><br>
+			<input type="radio" name="d" id="4"><label>document.getElementById (“letsfindcourse").innerHTML = "I
+				am a
+				letsfindcourse";</label><br>
+			<input type="radio" name="d"><label>document.getId (“letsfindcourse") = "I am a letsfindcourse";</label><br>
+			<input type="radio" name="d"><label>document.getElementById (“letsfindcourse").innerHTML = I am a
+				letsfindcourse;</label><br>
+			<label class="a">5)Which of the following is the correct syntax to display "Letsfindcourse" in an alert box
+				using JavaScript?</label><br>
+			<input type="radio" name="e"><label>alert-box("Letsfindcourse");</label><br>
+			<input type="radio" name="e"><label>confirm("Letsfindcourse");</label><br>
+			<input type="radio" name="e"><label>msgbox("Letsfindcourse");</label><br>
+			<input type="radio" name="e" id="5"><label>alert("Letsfindcourse");</label><br>
+			<button onclick="g()">Submit</button>
+			<span id="ans"></span>
+			<input hidden name="hide" id="hide">
+		</div>
+	</form>
+</body>
+
+</html>

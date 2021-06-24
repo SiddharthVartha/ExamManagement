@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+			padding: 0px;
+
+			background-image: url("https://wallpapercave.com/wp/wp3161585.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		div {
+			opacity: 0.9;
+			width: 600px;
+			height: 650px;
+			background-color: gray;
+			margin-left: 200px;
+		}
+
+		.a {
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		label {
+			font-size: 17px;
+		}
+
+		button {
+			margin-left: 80px;
+		}
+
+		#ans {
+			margin-left: 80px;
+			visibility: hidden;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+	<script type="text/javascript">
+		var d=0;
+		function g() {
+			var x = document.getElementById('ans');
+			var f = document.getElementById('fm');
+			var hd = document.getElementById('hide');
+			var one=document.getElementById('1').checked;
+			var two=document.getElementById('2').checked;
+			var three=document.getElementById('3').checked;
+			var four=document.getElementById('4').checked;
+			var five=document.getElementById('5').checked;
+			f.addEventListener('submit', function () {
+				if(one==true){
+					d++;
+				}
+				if(two==true){
+					d++;
+				}
+				if(three==true){
+					d++;
+				}
+				if(four==true){
+					d++;
+				}
+				if(five==true){
+					d++;
+				}
+				/*x.innerHTML = "Score:" + d + "/" + 5;
+				x.style.visibility = "visible";*/
+				hd.value=d;
+			})
+		}
+	</script>
+</head>
+
+<body>
+	<form id="fm" action="http://localhost/foldername/ex2.php" method="POST">
+		<div>
+			<label class="a">1)If we want define style for an unique element, then which css selector will we use
+				?</label><br>
+			<input type="radio" name="a" id="1"><label>Id</label><br>
+			<input type="radio" name="a"><label>class</label><br>
+			<input type="radio" name="a"><label>name</label><br>
+			<input type="radio" name="a"><label>text</label><br>
+			<label class="a">2)Which of the following property is used to increase or decrease how bold or light a font
+				appears?</label><br>
+			<input type="radio" name="b"><label>font-family</label><br>
+			<input type="radio" name="b"><label>font-style</label><br>
+			<input type="radio" name="b"><label>font-variant</label><br>
+			<input type="radio" name="b" id='2'><label>font-weight</label><br>
+			<label class="a">3)Which of the following property specifies the width of a border?</label><br>
+			<input type="radio" name="c"><label>border-color</label><br>
+			<input type="radio" name="c"><label>border-style</label><br>
+			<input type="radio" name="c" id='3'><label>border-width</label><br>
+			<input type="radio" name="c"><label>border-bottom-color</label><br>
+			<label class="a">4)Which of the following property specifies the bottom margin of an element?</label><br>
+			<input type="radio" name="d"><label>margin</label><br>
+			<input type="radio" name="d" id='4'><label>margin-bottom</label><br>
+			<input type="radio" name="d"><label>margin-top</label><br>
+			<input type="radio" name="d"><label>margin-left</label><br>
+			<label class="a">5)CSS stands for -</label><br>
+			<input type="radio" name="e"><label>Color and style sheets</label><br>
+			<input type="radio" name="e"><label>Cascade style sheets</label><br>
+			<input type="radio" name="e"><label>None of these</label><br>
+			<input type="radio" name="e" id='5'><label>Cascading style sheets</label><br>
+			<button onclick="g()">Submit</button>
+			<span id="ans"></span>
+			<input hidden name="hide" id="hide">
+		</div>
+	</form>
+</body>
+
+</html>

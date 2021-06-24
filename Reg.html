@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+    <style type="text/css">
+    	body{
+    		margin: 0px;
+    		padding: 0px;
+    		background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS2jqqpBAaJA_Rs5maRnY3DUNEIIQVaWZOw&usqp=CAU");
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    	}
+    	form{
+    		 margin-top: 120px;
+    		  opacity: 0.8;
+             text-align: center;
+             border: 3px black solid;
+             background-color:#BFD0C3;
+             border-radius: 20px;
+    	}
+    	body{
+    		margin-left: 500px;
+    		margin-right: 500px;
+    	}
+    	.a .b .c{
+    		width: 300px;
+    	}
+    </style>
+    <script>
+    	function a(){
+    		window.open("exam.html");
+    	}
+    </script>
+</head>
+<body>
+    	<form action="http://localhost/foldername/regvar.php" method="post">
+		<h3>NAME</h3>
+		<input class="a"  placeholder="name" name="name" required><br><br> 
+		<h3>ROLL NO.</h3>
+		<input class="b"  placeholder="roll no." name="rno" required><br><br>
+        <h3>E-mail Address</h3>
+		<input class="c"  placeholder="E-mail id" name="Email1" required>
+		<br><br>
+		<h3>SELECT YOUR BRANCH</h3>
+		<select>
+		<option>COMPUTER</option>
+		<option>IT</option>
+		<option>MECHANICAL</option>
+		<option>ELECTRICAL</option>
+		<option>INSTRUMENTAL</option>	
+		</select><br><br>
+		<h3>SELECT YOUR BIRTH DATE</h3>
+		<input type="DATE"><br><br>
+        <input type="submit" name="submit" value="OK" onclick="a()">
+		<button type="reset"> Reset</button>
+	    </form>
+</body>
+</html>
